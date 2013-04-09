@@ -241,9 +241,11 @@ Examine the commit log.
 To make it easier to work with commits, git provides a naming mechanism.
 Named git hash values are referred to as _refs_ and are stored under _.git/refs_.
 
-A branch is a sequence of commits that start from a parentless commit object
-and end at a commit object called the head.  
-Git stores refs to head commit objects under _.git/refs/heads_.
+A branch is a directed graph of commits that culminate at a single commit object
+referred to as its head.  A branch is not neccessarily a simple sequence of commits
+because merge operations may result in commit objects with multiple parents.
+
+Git stores refs to branch heads under _.git/refs/heads_.
 The ref name is the name of the branch.
 
 Create a ref that points to the last commit and make it the head of
@@ -413,7 +415,8 @@ In this case, git sets the following to the hash of the local master branch head
 
     .git/refs/remotes/origin
 
-Remote refs can not be checked out like local refs -- I'm not sure about this concept.
+Remote refs can not be checked out like local refs; they can only be merged into 
+local branches. (Is this correct?)
 
 TODO: experiments on remote refs
 
