@@ -1,0 +1,8 @@
+/proj/Library
+/proj/proj.userprefs
+/proj/Temp
+.DS_Store
+*.pidb
+*.unityproj
+*/proj-csharp.sln
+
