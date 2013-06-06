@@ -40,6 +40,7 @@ function attack() {
   if (!pauseLoopAnim) StartCoroutine(AttackAnim());
 }
 
+/*
 // TODO: move the following update function into character controller.
 function Update () {
   if (Input.GetButton ("Fire1")) {
@@ -50,6 +51,7 @@ function Update () {
     idle();
   }
 }
+*/
 
 private function IdleAnim() {
   StopCoroutine(loopAnim);
