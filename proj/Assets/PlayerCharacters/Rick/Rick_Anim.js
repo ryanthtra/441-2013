@@ -52,6 +52,7 @@ function Update () {
 }
 
 private function IdleAnim() {
+  StopCoroutine(loopAnim);
   loopAnim = 'idle';
   var i = 0;
   while (loopAnim === 'idle') {
@@ -64,6 +65,7 @@ private function IdleAnim() {
 }
 
 private function WalkAnim() {
+  StopCoroutine(loopAnim);
   loopAnim = 'walk';
   var i = 0;
   while (loopAnim === 'walk') {
